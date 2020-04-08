@@ -1,28 +1,21 @@
-import React, { Component } from "react";
-import logo from "./logo.svg";
-import "./App.css";
+import React from 'react';
+import { Browser as Router, Switch, Route } from 'react-router-dom';
+import Search from './pages/Search';
+import Saved from './pages/Saved';
+import UhOh404 from './pages/UhOh404';
 
-class App extends Component {
-  // state for search term
-
-
-  
-  render() {
-    return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-
-          {/* // input value will be coming from state */}
-
-          <h2>Welcome to Google Book Search</h2>
-        </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
-    );
-  }
+const App = () => {
+  return (
+    <Router>
+      <React.Fragment>
+        <Switch>
+          <Route exact path ='/' component={Search} />
+          <React exact path ='/search' component={Search} />
+          <React exact path ='/saved' component={Saved} />
+          <React component={UhOh404} />
+        </Switch>
+      </React.Fragment>
+    </Router>
+  )
 }
 
-export default App;
