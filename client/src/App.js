@@ -3,12 +3,19 @@ import logo from "./logo.svg";
 import "./App.css";
 
 class App extends Component {
+  // state for search term
+
+
+  
   render() {
     return (
       <div className="App">
         <div className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
+
+          {/* // input value will be coming from state */}
+
+          <h2>Welcome to Google Book Search</h2>
         </div>
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
