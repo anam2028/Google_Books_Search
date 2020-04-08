@@ -1,12 +1,12 @@
 const router = require('express').Router();
 
-const { getSavedBook, saveBook, removeBook } = require ('../../controllers/bookController')
+const { getSavedBooks, saveBook, removeBook } = require ('../../controllers/bookController')
 
 //GET and Post at /api/books
 
 router
  .route('/')
- .get(getSavedBook)
+ .get(getSavedBooks)
  .post(saveBook);
 
  //DELETE  at /api/books/:id

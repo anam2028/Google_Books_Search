@@ -30,7 +30,7 @@ const removeBook = (req, res) => {
 };
 
 module.exports = {
-    getSavedBook,
+    getSavedBooks,
     saveBook,
     removeBook
 };

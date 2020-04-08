@@ -1,4 +1,4 @@
-import axios from axios;
+import axios from 'axios';
 
 // apis to get the google book info
 
@@ -10,15 +10,15 @@ import axios from axios;
 
 export const saveBook = bookData => {
     return axios.post('/api/books', bookData)
-};
+}
 
 export const getSavedBook = () =>  {
-    return axios.get('/api/books');
-};
+    return axios.get('/api/books')
+}
 
-export const removeBook = () = bookId => {
-    return axios.delete('/api/books/${bookId');
-};
+export const removeBook = bookId => {
+    return axios.delete(`/api/books/${bookId}`)
+}
 
 export const searchGoogleBooks = query => {
     return axios.get('https://www.googleapis.com/books/v1/volumes', {
@@ -35,4 +35,3 @@ export default {
     searchGoogleBooks
 };
 
-}
