@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 // import Row from '../components/Row';
 // import Column from '../components/Column';
 // import Card from '../components/Card';
-import { searchGoogleBooks, saveBook, getSaveBook } from '../utils/API';
+import { searchGoogleBooks, saveBook, getSavedBooks } from '../utils/API';
 
 class Search extends Component {
  state = {
@@ -14,7 +14,7 @@ class Search extends Component {
      error: null
  }
 
- handleInputChange = event => {
+ handleInputChange = event => { 
      const { name, value } = event.target;
      this.state({
          [name]: value

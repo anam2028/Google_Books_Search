@@ -12,7 +12,7 @@ export const saveBook = bookData => {
     return axios.post('/api/books', bookData)
 }
 
-export const getSavedBook = () =>  {
+export const getSavedBooks = () =>  {
     return axios.get('/api/books')
 }
 
@@ -30,7 +30,7 @@ export const searchGoogleBooks = query => {
 
 export default {
     saveBook,
-    getSavedBook,
+    getSavedBooks,
     removeBook,
     searchGoogleBooks
 };

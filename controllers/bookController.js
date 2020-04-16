@@ -20,7 +20,7 @@ const saveBook = (req, res) => {
 
 const removeBook = (req, res) => {
   Book.remove({
-    _id: req.param.id,
+    _id: req.params.id,
   })
     .then((dbBookData) => res.json(dbBookData))
     .catch((err) => {

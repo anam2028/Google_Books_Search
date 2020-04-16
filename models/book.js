@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
 const { Schema } = mongoose;
 
 const BookSchema = new Schema({
@@ -22,5 +22,5 @@ const BookSchema = new Schema({
   },
 });
 
-const Book = mongoose.model("Book", BookSchema);
+const Book = mongoose.model("book", BookSchema);
 module.exports = Book;
